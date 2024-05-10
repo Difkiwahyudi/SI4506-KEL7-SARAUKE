@@ -145,7 +145,7 @@
                     <div class="col text-center section-popular-heading">
                         <h2>Wisata Popular</h2>
                         <p>
-                            Something that you never try
+                            Something that you never try!
                             <br />
                             before in this world
                         </p>
