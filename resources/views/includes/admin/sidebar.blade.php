@@ -39,9 +39,9 @@
             <span>2</span></a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="">
+        <a class="nav-link" href="{{ route('admin_slide_view') }}">
             <i class="fas fa-fw fa-cog"></i>
-            <span>3</span></a>
+            <span>Recommendation Travel</span></a>
     </li>
 
     <li class="nav-item">
