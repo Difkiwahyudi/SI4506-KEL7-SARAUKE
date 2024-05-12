@@ -33,7 +33,7 @@
                     </div>
                     <div class="form-group">
                         <label for="about">About</label>
-                        <textarea name="about" class="tinymce-editor">{{ old('form-controller') }}</textarea>
+                        <input type="text" class="form-control" name="about" placeholder="About" value="{{ old('about') }}">
                     </div>
                     <div class="form-group">
                         <label for="featured_event">Featured Event</label>

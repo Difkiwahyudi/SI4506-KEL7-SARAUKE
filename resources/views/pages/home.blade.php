@@ -100,6 +100,41 @@
     </style>
     {{-- <header class="text-center"> --}}
     <div class="text-center owl-carousel owl-theme owl-img-responsive header owl-theme owl-loade">
+    @foreach ($slide_all as $item)
+            <div class="item"
+                style="background-image:url({{ asset('uploads/' . $item->photo) }});padding: 180px 0 165px;margin-top: -70px;background-size: cover;">
+                <div class="bg"></div>
+                <div class="text">
+                    <h1
+                        style="font-family: 'Playfair Display', serif;
+                    font-weight: bold;
+                    font-size: 50px;color:white;">
+                        {{ $item->heading }}<h1>
+                            <p style="color:white;">
+                                {!! $item->text !!}
+                            </p>
+                            @if ($item->button_text != '')
+                                <div class="button"
+                                    style="font-size: 15px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    display: inline-block;
+                    background: #62E8BE;
+                    color: #fff;
+                    text-decoration: none;
+                    border: 1px solid #62E8BE;
+                    border-radius: 3px;
+                    -webkit-border-radius: 3px;
+                    padding: 14px 45px;
+                    transition: all 0.3s;
+                    -webkit-transition: all 0.3s;">
+                                    <a href="{{ $item->button_url }}" style="color: white;">{{ $item->button_text }} &nbsp;
+                                        ❯</a>
+                                </div>
+                            @endif
+                </div>
+            </div>
+        @endforeach
         
     </div>
     {{-- <h1>
@@ -154,22 +189,36 @@
             </div>
         </section>
 
-        
 
-        <section class="section-testimonial-heading" id="testimonialHeading">
+        <!-- Gambar-->
+        <section class="section-popular-content" id="popularContent">
             <div class="container">
-                <div class="row">
-                    <div class="col text-center">
-                        <h2>They Are Loving Us</h2>
-                        <p>
-                            Moments were giving them
-                            <br />
-                            the best experience
-                        </p>
-                    </div>
+                <div class="section-popular-travel row justify-content-center">
+                    @foreach ($items as $item)
+                        <div class="col-sm-6 col-md-4 col-lg-3">
+                            <div class="card-travel text-center d-flex flex-column"
+                                style="background-image: url('{{ $item->galleries->count() ? Storage::url($item->galleries->first()->image) : '' }}');border-color: #ffffff!important;
+                                border-style: solid!important;
+                                border-width: 5px 5px 5px 5px!important;">
+                                <div class="travel-location">{{ $item->title }}</div>
+                                <div class="travel-country">{{ $item->location }}</div>
+
+                                <div class="travel-button mt-auto">
+                                    <a href="{{ route('detail', $item->slug) }}" class="btn btn-travel-details px-4">
+                                        View Details
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
                 </div>
             </div>
         </section>
+        <!-- Gambar-->
+
+        
+
+        
 
         <section class="section section-testimonial-content" id="testimonialContent">
             <div class="container">
