@@ -61,7 +61,7 @@
                   class="features-image"
                 />
                 <div class="description">
-                  <h3>Featured Event</h3>
+                  <h3>Event</h3>
                   <p>{{ $item->featured_event }}</p>
                 </div>
               </div>
@@ -73,7 +73,7 @@
                     class="features-image"
                   />
                   <div class="description">
-                    <h3>Language</h3>
+                    <h3> Bahasa</h3>
                     <p>{{ $item->language }}</p>
                   </div>
                 </div>
@@ -86,7 +86,7 @@
                     class="features-image"
                   />
                   <div class="description">
-                    <h3>Foods</h3>
+                    <h3>Makanan</h3>
                     <p>{{ $item->foods }}</p>
                   </div>
                 </div>
