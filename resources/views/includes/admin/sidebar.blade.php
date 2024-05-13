@@ -34,9 +34,9 @@
         </div>
     </li> --}}
     <li class="nav-item">
-        <a class="nav-link" href="">
+        <a class="nav-link" href="{{ route('admin_setting') }}">
             <i class="fas fa-fw fa-cog"></i>
-            <span>2</span></a>
+            <span>Settings</span></a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="{{ route('admin_slide_view') }}">
