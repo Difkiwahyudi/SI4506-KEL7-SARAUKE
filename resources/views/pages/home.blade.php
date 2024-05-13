@@ -100,42 +100,8 @@
     </style>
     {{-- <header class="text-center"> --}}
     <div class="text-center owl-carousel owl-theme owl-img-responsive header owl-theme owl-loade">
-    @foreach ($slide_all as $item)
-            <div class="item"
-                style="background-image:url({{ asset('uploads/' . $item->photo) }});padding: 180px 0 165px;margin-top: -70px;background-size: cover;">
-                <div class="bg"></div>
-                <div class="text">
-                    <h1
-                        style="font-family: 'Playfair Display', serif;
-                    font-weight: bold;
-                    font-size: 50px;color:white;">
-                        {{ $item->heading }}<h1>
-                            <p style="color:white;">
-                                {!! $item->text !!}
-                            </p>
-                            @if ($item->button_text != '')
-                                <div class="button"
-                                    style="font-size: 15px;
-                    font-weight: 700;
-                    text-transform: uppercase;
-                    display: inline-block;
-                    background: #62E8BE;
-                    color: #fff;
-                    text-decoration: none;
-                    border: 1px solid #62E8BE;
-                    border-radius: 3px;
-                    -webkit-border-radius: 3px;
-                    padding: 14px 45px;
-                    transition: all 0.3s;
-                    -webkit-transition: all 0.3s;">
-                                    <a href="{{ $item->button_url }}" style="color: white;">{{ $item->button_text }} &nbsp;
-                                        ❯</a>
-                                </div>
-                            @endif
-                </div>
-            </div>
-        @endforeach
-        
+    
+      
     </div>
     {{-- <h1>
     Explore The Beautiful World
@@ -190,7 +156,7 @@
         </section>
 
 
-        <!-- Gambar-->
+        <!-- Trip Inf-->
         <section class="section-popular-content" id="popularContent">
             <div class="container">
                 <div class="section-popular-travel row justify-content-center">
@@ -214,7 +180,7 @@
                 </div>
             </div>
         </section>
-        <!-- Gambar-->
+        <!-- Trip inf-->
 
         
 
