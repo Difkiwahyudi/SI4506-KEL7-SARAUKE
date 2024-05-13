@@ -84,6 +84,7 @@ Route::prefix('admin')
             ->name('dashboard');
 
         Route::resource('travel-package', 'TravelPackageController');
+        Route::resource('travel-journey', 'TravelJourneyController');
         Route::resource('gallery', 'GalleryController');
         Route::resource('transaction', 'TransactionController');
         Route::post('transaction/kirimbukti', 'TransactionController@kirimbukti')->name('transaction.kirimbukti');
