@@ -29,7 +29,7 @@
           <a href="" class="nav-link">Paket Travel</a>
         </li>
         <li class="nav-item mx-md-2">
-          <a href="" class="nav-link">Transaksi</a>
+          <a href="{{ route('transaksi') }}" class="nav-link">Transaksi</a>
         </li>
         <li class="nav-item mx-md-2">
           <a href="" class="nav-link">Payment</a>
