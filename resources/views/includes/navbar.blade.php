@@ -23,7 +23,7 @@
           <a href="{{ route('about') }}" class="nav-link">About</a>
         </li>
         <li class="nav-item mx-md-2">
-          <a href="" class="nav-link">Explore</a>
+          <a href="{{ route('explore') }}" class="nav-link">Explore</a>
         </li>
         <li class="nav-item mx-md-2">
           <a href="" class="nav-link">Paket Travel</a>
