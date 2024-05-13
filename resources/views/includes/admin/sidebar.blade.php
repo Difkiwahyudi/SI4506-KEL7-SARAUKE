@@ -45,9 +45,9 @@
     </li>
 
     <li class="nav-item">
-        <a class="nav-link" href="">
+        <a class="nav-link" href="{{ route('travel-journey.index') }}">
             <i class="fas fa-fw fa-sliders-h"></i>
-            <span>4</span></a>
+            <span>Travel Journey</span></a>
     </li>
 
     <li class="nav-item">
