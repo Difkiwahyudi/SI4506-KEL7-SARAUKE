@@ -32,7 +32,7 @@
           <a href="{{ route('transaksi') }}" class="nav-link">Transaksi</a>
         </li>
         <li class="nav-item mx-md-2">
-          <a href="" class="nav-link">Payment</a>
+          <a href="{{ route('payment') }}" class="nav-link">Payment</a>
         </li>
         {{-- <li class="nav-item dropdown">
           <a
