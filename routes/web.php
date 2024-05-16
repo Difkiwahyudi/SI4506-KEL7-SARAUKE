@@ -25,6 +25,9 @@ Route::get('/explore', 'ExploreController@index')
 Route::get('/explore/cari', 'ExploreController@cari')
     ->name('explore_cari');
 
+Route::get('/traveljourney', 'TravelJourneyUser@index')
+    ->name('traveljourney');
+
 Route::get('/payment', 'PaymentController@index')
     ->name('payment');
 

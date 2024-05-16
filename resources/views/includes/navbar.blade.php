@@ -26,6 +26,9 @@
           <a href="{{ route('explore') }}" class="nav-link">Explore</a>
         </li>
         <li class="nav-item mx-md-2">
+          <a href="{{ route('traveljourney') }}" class="nav-link">Travel Journey</a>
+        </li>
+        <li class="nav-item mx-md-2">
           <a href="" class="nav-link">Paket Travel</a>
         </li>
         <li class="nav-item mx-md-2">
