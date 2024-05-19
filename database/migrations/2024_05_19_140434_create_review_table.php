@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTravelJourneysTable extends Migration
+class CreateReviewTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,13 @@ class CreateTravelJourneysTable extends Migration
      */
     public function up()
     {
-        Schema::create('travel_journey', function (Blueprint $table) {
+        Schema::create('reviews', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('title');
-            $table->string('slug');
-            $table->string('location');
-            $table->longText('about');
-            $table->softDeletes();
-            $table->timestamps();
+            $table->string('nama_user');
+            $table->string('rating_review');
+            $table->text('comment')->nullable();
+            $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
+        
         });
     }
 
@@ -31,6 +30,6 @@ class CreateTravelJourneysTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('travel_journey');
+        Schema::dropIfExists('review_table');
     }
 }

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    Sarauke
+    Jago Wisata
 @endsection
 
 @section('content')
@@ -100,8 +100,6 @@
     </style>
     {{-- <header class="text-center"> --}}
     <div class="text-center owl-carousel owl-theme owl-img-responsive header owl-theme owl-loade">
-        
-        <!--Recommendation Travel-->
         @foreach ($slide_all as $item)
             <div class="item"
                 style="background-image:url({{ asset('uploads/' . $item->photo) }});padding: 180px 0 165px;margin-top: -70px;background-size: cover;">
@@ -181,7 +179,7 @@
                     <div class="col text-center section-popular-heading">
                         <h2>Wisata Popular</h2>
                         <p>
-                            Something that you never try!
+                            Something that you never try
                             <br />
                             before in this world
                         </p>
@@ -190,8 +188,6 @@
             </div>
         </section>
 
-
-        <!-- Trip Inf-->
         <section class="section-popular-content" id="popularContent">
             <div class="container">
                 <div class="section-popular-travel row justify-content-center">
@@ -215,12 +211,62 @@
                 </div>
             </div>
         </section>
-        <!-- Trip inf-->
+
 
         
-
         
 
+        <!-- <section class="section-testimonial-heading" id="testimonialHeading">
+            <div class="container">
+                <div class="row">
+                    <div class="col text-center">
+                        <h2>Review</h2>
+                        <p>
+                            Apa pendapatmu tentang Sarauke?
+                            <br />
+                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <section class="section-testimonial-heading" id="testimonialHeading">
+            <div class="container">
+                <div class="row">
+                    <div class="col text-center">
+                        <h2>Review</h2>
+                        <h3>Apa pendapatmu tentang Sarauke?</h3>
+                    </div>
+                </div>
+                <div class="row justify-content-center mt-5">
+                    <div class="col-md-6">
+                        <form action="{{ route('submit_review') }}" method="POST">
+                            @csrf
+                            <div class="form-group">
+                                <label for="nama_user">Nama</label>
+                                <input type="text" class="form-control" id="nama_user" name="nama_user" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="rating_review">Rating</label>
+                                <input type="number" class="form-control" id="rating_review" name="rating_review" min="1" max="5" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="comment">Komentar</label>
+                                <textarea class="form-control" id="comment" name="comment" rows="3"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Kirim Review</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section-testimonial-heading" id="testimonialHeading">
+        
+        </section>
+
+        <!-- review -->
         <section class="section section-testimonial-content" id="testimonialContent">
             <div class="container">
                 <div class="section-popular-travel row justify-content-center">
@@ -230,8 +276,7 @@
                                 <img src="frontend/images/testimonial-1.png" alt="User" class="mb-4 rounded-circle" />
                                 <h3 class="mb-4">Nasrul Kurniawan</h3>
                                 <p class="testimonial">
-                                    “Informasi yang diberikan oleh website Sarauke jelas dan informatif mengenai wisata yang 
-                                    ingin saya tuju“
+                                    “ Informasi yang diberikan terkait wisata sangat relevan. “
                                 </p>
                             </div>
                             <hr />
@@ -246,8 +291,7 @@
                                 <img src="frontend/images/testimonial-2.png" alt="User" class="mb-4 rounded-circle" />
                                 <h3 class="mb-4">Fahmi N</h3>
                                 <p class="testimonial">
-                                    “ The trip was amazing and I saw something beautiful in that
-                                    Island that makes me want to learn more “
+                                    “ Aku mendapatkan banyak gambaran dari wisata yang ingin aku kunjungi “
                                 </p>
                             </div>
                             <hr />
@@ -262,8 +306,8 @@
                                 <img src="frontend/images/testimonial-3.png" alt="User" class="mb-4 rounded-circle" />
                                 <h3 class="mb-4">Kayla</h3>
                                 <p class="testimonial">
-                                    “ I loved it when the waves was shaking harder — I was
-                                    scared too “
+                                    “ Sangat mudah digunakan untuk mencari informasi terkait wisata yang ingin aku 
+                                    kunjungi “
                                 </p>
                             </div>
                             <hr />

@@ -13,6 +13,8 @@
 use App\Http\Controllers\Admin\AdminSettingController;
 use App\Http\Controllers\Admin\AdminProfileController;
 
+
+
 Route::get('/', 'HomeController@index')
     ->name('home');
 
@@ -78,6 +80,11 @@ Route::get('/user', 'UserController@index')
 Route::post('/user/edit-profile-submit', 'UserController@profile_submit')
     ->name('user_edit_profile_submit')
     ->middleware(['auth','verified']);
+
+
+Route::post('/submit-review', 'ReviewController@submitReview')
+->name('submit_review');
+
 
 Route::prefix('admin')
     ->namespace('Admin')

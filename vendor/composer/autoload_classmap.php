@@ -27,6 +27,8 @@ return array(
     'App\\Http\\Controllers\\DetailController' => $baseDir . '/app/Http/Controllers/DetailController.php',
     'App\\Http\\Controllers\\ExploreController' => $baseDir . '/app/Http/Controllers/ExploreController.php',
     'App\\Http\\Controllers\\HomeController' => $baseDir . '/app/Http/Controllers/HomeController.php',
+    'App\\Http\\Controllers\\PaymentController' => $baseDir . '/app/Http/Controllers/PaymentController.php',
+    'App\\Http\\Controllers\\TravelJourneyUser' => $baseDir . '/app/Http/Controllers/TravelJourneyUser.php',
     'App\\Http\\Controllers\\UserController' => $baseDir . '/app/Http/Controllers/UserController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
     'App\\Http\\Middleware\\Authenticate' => $baseDir . '/app/Http/Middleware/Authenticate.php',
