@@ -195,8 +195,8 @@
                                 <img src="frontend/images/testimonial-1.png" alt="User" class="mb-4 rounded-circle" />
                                 <h3 class="mb-4">Nasrul Kurniawan</h3>
                                 <p class="testimonial">
-                                    “ It was glorious and I could not stop to say wohooo for
-                                    every single moment Dankeeeeee “
+                                    “Informasi yang diberikan oleh website Sarauke jelas dan informatif mengenai wisata yang 
+                                    ingin saya tuju“
                                 </p>
                             </div>
                             <hr />
