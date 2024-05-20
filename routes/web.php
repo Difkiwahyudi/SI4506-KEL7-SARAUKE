@@ -60,6 +60,7 @@ Route::get('/checkout/{id}', 'CheckoutController@index')
 Route::post('/checkout/create/{detail_id}', 'CheckoutController@create')
     ->name('checkout-create')
     ->middleware(['auth','verified']);
+    
 
 Route::get('/checkout/remove/{detail_id}', 'CheckoutController@remove')
     ->name('checkout-remove')
