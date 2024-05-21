@@ -144,7 +144,6 @@
                                     <select name="payment_method" class="form-control select2" id="paymentMethodChange"
                                         required="required" autocomplete="off" required>
                                         <option value="" selected disabled>Select Payment Method</option>
-                                        <option value="midtrans">Midtrans</option>
                                         <option value="transfer">Transfer Bank</option>
                                     </select>
                                 </div>

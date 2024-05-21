@@ -8,9 +8,6 @@ use App\Http\Requests\Admin\TransactionRequest;
 use App\Transaction;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Auth;
-use Midtrans\Snap;
-use Midtrans\Config;
-use Midtrans\Notification;
 use App\Rekening;
 
 class PaymentController extends Controller
@@ -106,53 +103,6 @@ class PaymentController extends Controller
 
     }
 
-    public function callback(Request $request)
-    {
-        // Transaction::where('id', '=', 24)->update(['transaction_status' => 'SUCCESS']);
-        // $transaction = Transaction::findOrFail($request->transaction_id);
-        // $transaction->transaction_status = $request->transaction_status;
-        // $transaction->save();
-
-        // return response()->json([
-        //     'message' => 'success'
-        // ]);
-        // Set konfigurasi midtrans
-        Config::$serverKey = config('services.midtrans.serverKey');
-        Config::$clientKey = config('services.midtrans.clientKey');
-        Config::$isProduction = config('services.midtrans.isProduction');
-        Config::$isSanitized = config('services.midtrans.isSanitized');
-        Config::$is3ds = config('services.midtrans.is3ds');
-
-        // Buat instance midtrans notification
-        $notification = new Notification();
-
-        // Assign ke variable untuk memudahkan coding
-        $status = $notification->transaction_status;
-        $type = $notification->payment_type;
-        $orderId = $notification->order_id;
-        $fraud = $notification->fraud_status;
-
-        // Handle notifikasi status midtrans
-        if ($status == 'capture') {
-            if ($type == 'credit_card') {
-                if ($fraud == 'challenge') {
-                    Transaction::where('id', $orderId)->update(['transaction_status' => 'PENDING']);
-                } else {
-                    Transaction::where('id', $orderId)->update(['transaction_status' => 'SUCCESS']);
-                }
-            }
-        } elseif ($status == 'settlement') {
-            Transaction::where('id', $orderId)->update(['transaction_status' => 'SUCCESS']);
-        } elseif ($status == 'pending') {
-            Transaction::where('id', $orderId)->update(['transaction_status' => 'PENDING']);
-        } elseif ($status == 'deny') {
-            Transaction::where('id', $orderId)->update(['transaction_status' => 'FAILED']);
-        } elseif ($status == 'expire') {
-            Transaction::where('id', $orderId)->update(['transaction_status' => 'FAILED']);
-        } elseif ($status == 'cancel') {
-            Transaction::where('id', $orderId)->update(['transaction_status' => 'CANCEL']);
-        }
-    }
     public function transfer_bank($id, Request $request)
     {
         if ( Auth::user()->roles == 'ADMIN' ) {
