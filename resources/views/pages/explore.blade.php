@@ -11,7 +11,7 @@
                         <nav>
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item">
-                                    Explore Place Jago Wisata
+                                    Explore Sarauke
                                 </li>
                                 <li class="breadcrumb-item active">
                                     Please Choose Your Destination
