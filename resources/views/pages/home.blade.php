@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    Jago Wisata
+    Sarauke Travel
 @endsection
 
 @section('content')

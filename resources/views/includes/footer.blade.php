@@ -164,13 +164,6 @@
     </div>
     <div class="container-fluid">
         <div class="row border-top justify-content-center align-items-center pt-2 pb-2">
-            <div class="col-auto text-white font-weight-light">
-                @if ($global_setting_data->copyright != '')
-                    {{-- <p class="text-white"> --}}
-                        {{ $global_setting_data->copyright }}
-                    {{-- </p> --}}
-                @endif
-            </div>
         </div>
     </div>
 </footer>
