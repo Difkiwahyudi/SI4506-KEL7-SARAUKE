@@ -15,6 +15,16 @@ class TravelJourneyUser extends Controller
     public function index()
     {
         $items = TravelJourney::paginate(8);
-        return view('pages.traveljourney');
+        return view('pages.traveljourney', [
+            'items' => $items
+        ]);
+    }
+
+    public function cari(Request $request)
+    {
+        $items = TravelJourney::where('title', 'like', "%" . $request->search . "%")->paginate(8);
+        return view('pages.traveljourney', [
+            'items' => $items
+        ]);
     }
 }
