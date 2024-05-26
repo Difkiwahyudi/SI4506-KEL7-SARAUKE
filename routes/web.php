@@ -30,6 +30,9 @@ Route::get('/explore/cari', 'ExploreController@cari')
 Route::get('/traveljourney', 'TravelJourneyUser@index')
     ->name('traveljourney');
 
+Route::get('/report', 'ReportUserController@index')
+    ->name('report');
+
 Route::get('/payment', 'PaymentController@index')
     ->name('payment');
 
@@ -117,6 +120,7 @@ Route::prefix('admin')
         Route::post('/users/store', 'MemberController@store')->name('admin_users_store');
         Route::get('/edit-profile', [AdminProfileController::class, 'index'])->name('admin_profile');
         Route::post('/edit-profile-submit', [AdminProfileController::class, 'profile_submit'])->name('admin_profile_submit');
+        Route::get('report', 'ReportController@index')->name('admin_report');
     });
 
 // Auth::routes(['verify' => true]);

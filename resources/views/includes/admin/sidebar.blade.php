@@ -63,6 +63,12 @@
             <span>7</span></a>
     </li>
 
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('admin_report') }}">
+            <i class="fas fa-fw fa-cash-register"></i>
+            <span>Report</span></a>
+    </li>
+
     <hr class="sidebar-divider">
 
     <!-- Sidebar Toggler (Sidebar) -->

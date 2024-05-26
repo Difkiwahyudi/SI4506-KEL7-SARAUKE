@@ -152,8 +152,8 @@
                         <div class="other-links text-center text-lg-end">
                             <a href="{{ route('about') }}">About</a>
                             <a href="{{ route('home') }}#paket" class="old-cookie-privacy-term">Paket Travel</a>
-                            <a href="{{ route('home') }}#testimonialContent"
-                                class="old-cookie-privacy-term">Testimoni</a>
+                            <a href="{{ route('report') }}#testimonialContent"
+                                class="old-cookie-privacy-term">Report</a>
                             <a href="{{ route('home') }}/login" class="old-cookie-privacy-term">Login</a>
                             <a href="{{ route('home') }}/register" class="old-cookie-privacy-term">Register</a>
                         </div>
