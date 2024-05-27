@@ -38,6 +38,13 @@
             <i class="fas fa-fw fa-cog"></i>
             <span>Settings</span></a>
     </li>
+
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('admin_users') }}">
+            <i class="fas fa-fw fa-cog"></i>
+            <span>List User</span></a>
+    </li>
+
     <li class="nav-item">
         <a class="nav-link" href="{{ route('admin_slide_view') }}">
             <i class="fas fa-fw fa-cog"></i>
