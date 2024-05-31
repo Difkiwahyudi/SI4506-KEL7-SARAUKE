@@ -27,6 +27,7 @@ class TravelJourneyRequest extends FormRequest
             'title' => 'required|max:255',
             'location' => 'required|max:255',
             'about' => 'required',
+            'language' => 'required|max:255',
         ];
     }
 }

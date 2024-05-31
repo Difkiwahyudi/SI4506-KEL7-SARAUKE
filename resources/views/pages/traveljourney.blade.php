@@ -59,7 +59,7 @@
                                                     <div class="travel-country">{{ $item->location }}</div>
 
                                                     <div class="travel-button mt-auto">
-                                                        <a href="{{ route('detail', $item->slug) }}" class="btn btn-travel-details px-4">
+                                                        <a href="{{ route('detailtraveljourney', $item->slug) }}" class="btn btn-travel-details px-4">
                                                             Read More
                                                         </a>
                                                     </div>

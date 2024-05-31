@@ -52,6 +52,9 @@ Route::post('/kirimbukti','PaymentController@kirimbukti')
 Route::get('/detail/{slug}', 'DetailController@index')
     ->name('detail');
 
+Route::get('/detailTravelJourney/{slug}', 'DetailTravelJourneyController@index')
+    ->name('detailtraveljourney');
+
 Route::post('/checkout/{id}', 'CheckoutController@process')
     ->name('checkout_process')
     ->middleware(['auth','verified']);
