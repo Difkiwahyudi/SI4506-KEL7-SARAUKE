@@ -19,6 +19,7 @@ class CreateTravelJourneysTable extends Migration
             $table->string('slug');
             $table->string('location');
             $table->longText('about');
+            $table->string('language');
             $table->softDeletes();
             $table->timestamps();
         });

@@ -6,7 +6,7 @@
 
       <!-- Page Heading -->
       <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Tambah Travel Journey</h1>
+        <h1 class="h3 mb-0 text-gray-800">Tambah Paket Travel</h1>
       </div>
 
       <!-- Content Row -->
@@ -34,6 +34,10 @@
                     <div class="form-group">
                         <label for="about">About</label>
                         <textarea name="about" class="form-control">{{ old('about') }}</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="language">Language</label>
+                        <input type="text" class="form-control" name="language" placeholder="Language" value="{{ old('language') }}">
                     </div>
                     <button type="submit" class="btn btn-primary btn-block">
                         Simpan

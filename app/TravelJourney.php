@@ -10,15 +10,11 @@ class TravelJourney extends Model
     use SoftDeletes;
 
     protected $fillable = [
-        'title', 'slug', 'location'
+        'title', 'slug', 'location', 'about', 'language',
     ];
 
     protected $hidden = [
 
     ];
-
-    public function galleries(){
-        return $this->hasMany( Gallery::class, 'travel_journey_id', 'id' );
-    }
 
 }

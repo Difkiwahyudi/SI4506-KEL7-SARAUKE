@@ -6,7 +6,7 @@
 
       <!-- Page Heading -->
       <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Ubah Travel Journey{{ $item->title }}</h1>
+        <h1 class="h3 mb-0 text-gray-800">Ubah Paket Travel {{ $item->title }}</h1>
       </div>
 
       <!-- Content Row -->
@@ -35,6 +35,11 @@
                     <div class="form-group">
                         <label for="about">About</label>
                         <textarea name="about" class="tinymce-editor">{{ $item->about }}</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="language">Language</label>
+                        <input type="text" class="form-control" name="language" placeholder="Language" value="{{ $item->language }}">
+                    </div>
                     <button type="submit" class="btn btn-primary btn-block">
                         Ubah
                     </button>
