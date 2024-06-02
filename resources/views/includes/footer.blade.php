@@ -87,20 +87,6 @@
                                 </a>
                             @endif
 
-                            @if ($global_setting_data->footer_phone != '')
-                                <a target="_blank" href="{{ $global_setting_data->footer_phone }}" title="Phone"
-                                    class="social-link">
-                                    <i class="fa fa-phone" aria-hidden="true"></i>
-                                </a>
-                            @endif
-
-                            @if ($global_setting_data->footer_email != '')
-                                <a target="_blank" href="{{ $global_setting_data->footer_email }}" title="Email"
-                                    class="social-link">
-                                    <i class="fa fa-envelope" aria-hidden="true"></i>
-                                </a>
-                            @endif
-
                             {{-- <a target="_blank" href="//twitter.com/wonderfulid" title="Twitter" class="social-link">
                                 <i class="fa fa-twitter" aria-hidden="true"></i>
                             </a>
