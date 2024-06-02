@@ -46,6 +46,8 @@ class AdminSettingController extends Controller
         // $obj->home_testimonial_status = $request->home_testimonial_status;
         // $obj->home_latest_post_total = $request->home_latest_post_total;
         // $obj->home_latest_post_status = $request->home_latest_post_status;
+        $obj->facebook = $request->facebook;
+        $obj->youtube = $request->youtube;
         $obj->about = $request->about;
         // $obj->theme_color_1 = $request->theme_color_1;
         // $obj->theme_color_2 = $request->theme_color_2;
@@ -54,4 +56,3 @@ class AdminSettingController extends Controller
         return redirect()->back()->with('success', 'Setting is updated successfully.');
     }
 }
-
