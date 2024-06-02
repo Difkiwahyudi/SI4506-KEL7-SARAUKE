@@ -71,9 +71,9 @@
 
     
     <li class="nav-item">
-        <a class="nav-link" href="">
+        <a class="nav-link" href="{{ route('transaction.index') }}">
             <i class="fas fa-fw fa-cash-register"></i>
-            <span>7</span></a>
+            <span>Manajemen Transaksi</span></a>
     </li>
 
     <li class="nav-item">
