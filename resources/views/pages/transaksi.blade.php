@@ -135,19 +135,6 @@
 
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <th width="50%">Total (+Unique)</th>
-                                        <td width="50%" class="text-right text-total">
-                                            <span class="text-blue">
-                                                @if (!empty($transaction->details))
-                                                    {{ 'Rp. ' . number_format($item->transaction_total, 0, ',', '.') ?? 0 }}
-                                                @else
-                                                    Rp. 0
-                                                @endif
-                                            </span>
-                                            {{-- <span class="text-orange">{{ mt_rand(0,99) }}</span> --}}
-                                        </td>
-                                    </tr>
                                 </table>
 
                                 <hr />
