@@ -24,7 +24,7 @@
                     <div class="col-lg-12 pl-lg-0">
                         <div class="card card-details">
                             <h1>Report an Issue</h1>
-                            <form method="POST" action="">
+                            <form method="POST" action="{{ route('reports.store') }}">
                                 @csrf
                                 <div class="form-group">
                                     <label for="name">Name</label>

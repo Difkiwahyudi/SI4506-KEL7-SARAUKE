@@ -33,6 +33,8 @@ Route::get('/traveljourney', 'TravelJourneyUser@index')
 Route::get('/report', 'ReportUserController@index')
     ->name('report');
 
+Route::resource('reports', ReportUserController::class);
+
 Route::get('/payment', 'PaymentController@index')
     ->name('payment');
 

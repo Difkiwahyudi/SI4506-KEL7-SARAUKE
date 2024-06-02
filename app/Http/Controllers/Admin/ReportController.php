@@ -4,17 +4,13 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Report;
 
 class ReportController extends Controller
 {
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
     public function index()
     {
-        return view('pages.admin.adminreport');
+        $items = Report::paginate(10);
+        return view('pages.admin.adminreport', compact('items'));
     }
 }
-
