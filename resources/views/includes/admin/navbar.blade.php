@@ -9,7 +9,7 @@
     <!-- Topbar Navbar -->
     <ul class="navbar-nav ml-auto">
         <li class="nav-link nav-item mt-2">
-            <a href="/" target="_blank" class="btn btn-warning">Front End</a>
+            <a href="/" target="_blank" class="btn btn-warning">Home Page</a>
         </li>
 
         <!-- Nav Item - User Information -->
