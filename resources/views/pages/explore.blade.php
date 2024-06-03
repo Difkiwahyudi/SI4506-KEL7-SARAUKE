@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'About Jago Wisata')
+@section('title', 'Eksplore | Sarauke')
 
 @section('content')
     <main>
