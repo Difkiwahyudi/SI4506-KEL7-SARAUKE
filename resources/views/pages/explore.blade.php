@@ -1,5 +1,9 @@
 @extends('layouts.app')
+<<<<<<< HEAD
 @section('title', 'Sarauke')
+=======
+@section('title', 'Eksplore | Sarauke')
+>>>>>>> 35c27c4e3911000b46511579be2cb2fd9bd79093
 
 @section('content')
     <main>
