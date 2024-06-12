@@ -38,21 +38,21 @@
                                         <a href="{{ route('gallery.edit', $item->id) }}" class="btn btn-info">
                                             <i class="fa fa-pencil-alt"></i>
                                         </a>
-                                        <form action="{{ route('gallery.destroy', $item->id) }}" method="post"
-                                            class="d-inline">
+                                        <button class="btn btn-danger" onclick="deleteGallery({{ $item->id }})">
+                                            <i class="fa fa-trash"></i>
+                                        </button>
+                                        <form id="delete-form-{{ $item->id }}" action="{{ route('gallery.destroy', $item->id) }}" method="POST" style="display: none;">
                                             @csrf
-                                            @method('delete')
-                                            <button class="btn btn-danger">
-                                                <i class="fa fa-trash"></i>
-                                            </button>
+                                            @method('DELETE')
                                         </form>
-
                                     </td>
                                 </tr>
                             @empty
-                                <td colspan="7" class="text-center">
-                                    Data Kosong
-                                </td>
+                                <tr>
+                                    <td colspan="4" class="text-center">
+                                        Data Kosong
+                                    </td>
+                                </tr>
                             @endforelse
                         </tbody>
                     </table>
@@ -63,4 +63,13 @@
             </div>
         </div>
         <!-- /.container-fluid -->
-    @endsection
+    </div>
+
+    <script>
+        function deleteGallery(id) {
+            if (confirm("Apakah Anda yakin ingin menghapus gambar ini?")) {
+                document.getElementById('delete-form-' + id).submit();
+            }
+        }
+    </script>
+@endsection
